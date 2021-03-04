@@ -1,0 +1,19 @@
+﻿@model object
+
+@using NonFactors.Mvc.Grid
+@using WebApplication.Repository
+
+@inject ICustomerRepo CustomerRepo
+@(Html
+    .Grid(await CustomerRepo.ListAsync())
+    .Build(columns =>
+    {
+        columns.Add(model => model.Id).Titled("Id");
+        columns.Add(model => model.Name).Titled("Name");
+    })
+    .Pageable(pager =>
+    {
+        pager.RowsPerPage = 10;
+    })
+    .Sortable()
+    )

@@ -1,0 +1,29 @@
+﻿@using WebApplication.Repository
+@model object
+
+@inject ICustomerRepo CustomerRepo
+
+<div class="mvc-grid mvc-grid-excel-mode" data-name="" data-filter-mode="Excel" data-url="">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <span class="mvc-grid-title">Id</span>
+                </th>
+                <th>
+                    <span class="mvc-grid-title">Name</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var currentCustomer in (await CustomerRepo.ListAsync()).Take(5))
+            {
+                <tr>
+                    <td>@currentCustomer.Id</td>
+                    <td>@(currentCustomer.Name)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+WebApplication/bin/
+WebApplication/obj/
+WebApplication/.vs/
+WebApplication/test.db
+WebApplication/WebApplication.csproj.user
+WebApplication/wwwroot/lib/
+WebApplication/WebApplication.sln.DotSettings.user
+Webapp.Tests/bin/
+Webapp.Tests/obj/
+.vs/slnx.sqlite
+XUnitTestProject/bin/
+XUnitTestProject/obj/
+XUnitTestProject/.vs/
+.vs/

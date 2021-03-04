@@ -1,0 +1,41 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="text-right">
+        <button type="reset"
+                class="btn btn-secondary">
+            Cancel
+        </button>
+        <button type="submit"
+                class="btn btn-success px-4">
+            Login
+        </button>
+    </div>
+</form>
+
+<p>Login with user1/password to access /Customers endpoint</p>
+<p>Login with user2/password to demonstrate no access</p>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

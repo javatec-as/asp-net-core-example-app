@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/mvc-grid/mvc-grid.css">
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<h1>Top 5 customers</h1>
+
+<vc:customer-table show-all="false" />
