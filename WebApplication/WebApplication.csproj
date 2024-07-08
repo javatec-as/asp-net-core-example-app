@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NHibernate" Version="5.3.6" />
+    <PackageReference Include="NHibernate" Version="5.4.9" />
     <PackageReference Include="NonFactors.Grid.Core.Mvc6" Version="6.2.4" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
